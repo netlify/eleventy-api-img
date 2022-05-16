@@ -54,6 +54,7 @@ async function handler(event, context) {
       widths: [width || "auto"],
       formats: [imageFormat || "auto"],
       dryRun: true,
+      useCache: false,
     });
 
     let format = Object.keys(stats).pop();
