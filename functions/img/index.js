@@ -54,6 +54,10 @@ async function handler(event, context) {
       widths: [width || "auto"],
       formats: [imageFormat || "auto"],
       dryRun: true,
+      // This should be re-used already https://github.com/11ty/eleventy-img/issues/117
+      cacheOptions: {
+        dryRun: true
+      }
     });
 
     let format = Object.keys(stats).pop();
